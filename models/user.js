@@ -4,9 +4,11 @@ var mongoose = require('mongoose')
   , Schema = mongoose.Schema
   , ObjectId = mongoose.SchemaTypes.ObjectId;
 
+// Set up the schema
 var UserSchema = new Schema({})
   , User;
 
+// Setup authentication plugins to use local and FB
 UserSchema.plugin(mongooseAuth, {
     everymodule: {
       everyauth: {

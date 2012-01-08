@@ -40,13 +40,13 @@ app.configure( function () {
 
 // Config for dev and test environments
 app.configure('development', 'test', function(){
-	everyauth.debug = true;
-	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  everyauth.debug = true;
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 // Config for production environments
 app.configure('production', function(){
-	app.use(express.errorHandler());
+  app.use(express.errorHandler());
 });
 
 // Setup the routes
@@ -58,14 +58,14 @@ app.listen(3000);
 //Setup Socket.IO
 var io = io.listen(app);
 io.on('connection', function(client){
-	console.log('Client Connected');
-	client.on('message', function(message){
-		client.broadcast(message);
-		client.send(message);
-	});
-	client.on('disconnect', function(){
-		console.log('Client Disconnected.');
-	});
+  console.log('Client Connected');
+  client.on('message', function(message){
+    client.broadcast(message);
+    client.send(message);
+  });
+  client.on('disconnect', function(){
+    console.log('Client Disconnected.');
+  });
 });
 
 console.log('Listening on http://localhost:' + nconf.get('port') );
