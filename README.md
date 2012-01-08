@@ -45,3 +45,10 @@ Additional Features:
 To add additional modules:
 
 Update the package.json file to include new module dependancies and run 'npm install'.
+
+
+Possible Future Additions:
+
+1. Google Ananlytics tie in to all pages
+2. HTML5 Boilerplate
+3. ...
