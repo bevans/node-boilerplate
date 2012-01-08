@@ -1,0 +1,25 @@
+{
+  "name": "YOUR-PROJECT-NAME-HERE",
+  "description": "YOUR PROJECT DESCRIPTION HERE",
+  "author": "YOUR NAME <your@emailaddress.com>",
+  "version": "0.0.1",
+  "dependencies": {
+    "connect": "*",
+    "express": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "socket.io": "*",
+    "nconf": "*",
+    "backbone": "*",
+    "natural": "*",
+    "validator": "*",
+    "everyauth": "*",
+    "mongoose-auth": "*"
+  },
+  "devDependencies": {
+  	"vows": "*",
+	"mocha": "*",
+	"should": "*"
+  },
+  "engine": "node >= 0.6.6"
+}
