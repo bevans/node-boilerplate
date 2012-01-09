@@ -36,7 +36,7 @@ Use spaces and not tabs.  This is an easy change in the settings of Aptana to re
 Declare new variables with comma's on the same line, eq:
 
     var util = require('util')
-    , express = require('express');
+      , express = require('express');
 
 Curly braces should be inline, eq `exports.myFunc = new function(){`. They should not be declared on a seperate line.
 
