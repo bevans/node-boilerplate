@@ -31,13 +31,14 @@ Other important files that have convential meaning
 
 Formating code is good practice.  In large development teams, have well formated code makes working together easier.  This section is very open to contribution, and most of the code starndard should be very visable though the boilerplate code.  These conventions are chosen to match the language, and the node.js community convention.
 
-Use spaces and not tabs.  This is an easy change in the settings of Aptana to replace tabs with spaces (2).
-Declare new variables with comma's on the same line, eq:
+*Use spaces and not tabs.  This is an easy change in the settings of Aptana to replace tabs with spaces (2).
+
+*Declare new variables with comma's on the same line, eq:
 
     var util = require('util')
     , express = require('express');
 
-Curly braces should be inline, eq `exports.myFunc = new function(){`. They should not be declared on a seperate line.
+*Curly braces should be inline, eq `exports.myFunc = new function(){`. They should not be declared on a seperate line.
 
 ###To start a boilerplate project:
     
