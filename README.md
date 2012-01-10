@@ -86,8 +86,9 @@ Go to http://localhost:3000 and login via facebok or local.  Once you are logged
 7. Authentecation built in
 8. Ready for unit tests
 
-###Possible Future Additions:
+###Todos:
 
-1. Google Ananlytics tie in to all pages
-2. HTML5 Boilerplate
-3. ...
+1. Cleanup HTML5 Boilerplate and css includes to not be so intrusive
+2. Documentation generator
+3. Basic redis implementation (a cache would be a good starting point)
+4. ..
