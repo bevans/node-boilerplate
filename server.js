@@ -29,15 +29,12 @@ db.connect();
 var model = require('./models');
 
 // Setup and configure the application
-var app = express.createServer(
-  express.bodyParser(),
-  express.static(__dirname + "/public"),
-  express.cookieParser(),
-  express.session({
-    secret : 'esoognom'
-  }), 
-  mongooseAuth.middleware()
-);
+var app = express.createServer();
+app.use(express.bodyParser());
+app.use(express.static(__dirname + "/public"));
+app.use(express.cookieParser());
+app.use(express.session({secret : 'esoognom'}));
+app.use(mongooseAuth.middleware());
 
 // Config for every environment
 app.configure(function() {
