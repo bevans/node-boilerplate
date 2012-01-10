@@ -31,15 +31,17 @@ Other important files that have convential meaning
 - [Supervisor](https://github.com/isaacs/node-supervisor) is a great tool to auto relaunch the application
 - [NodeInspector](https://github.com/dannycoates/node-inspector) is a great browser based debuger if you can't log items out
 
-###Libraries Used
+###Modules Used
 
 - [Express](http://expressjs.com/) - Web framework (includes [connect](http://senchalabs.github.com/connect/))
 - [Jade](http://jade-lang.com/) - Javascript based templating engine
 - [Mongoose](http://mongoosejs.com/) - Node.JS driver and wrapper for MongoDB
-- [MongooseAuth](https://github.com/bnoguchi/mongoose-auth) - MongoDB based authentication system, based on everyauth
+- [MongooseAuth](https://github.com/bnoguchi/mongoose-auth) - MongoDB based authentication system, based on [everyauth](https://github.com/bnoguchi/everyauth)
 - [Socket.IO](http://socket.io) - Real time web framework.  Websockets with fall back strategies.
 - [Backbone](http://documentcloud.github.com/backbone/) - Client side MVC framework
 - [nConf](https://github.com/flatiron/nconf) - Node configuration helper
+- [Mocha](http://visionmedia.github.com/mocha/) - Unit testing framework
+- [Should](https://github.com/visionmedia/should.js) - Helper module to BDD assertions
 
 ###Code format
 
