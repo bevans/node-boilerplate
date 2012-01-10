@@ -1,5 +1,5 @@
 var util = require('util')
-  , model = require('../models/model');
+  , model = require('../models');
 
 exports.init = function(app) {
   app.all('/user/chat', chat);

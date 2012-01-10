@@ -1,7 +1,7 @@
-//Setup Dependencies
-var natural = require('natural')
-  , nconf = require('nconf')
-  , fs = require('fs');
+
+var natural = require('natural'),
+  nconf = require('nconf'),
+  fs = require('fs');
 	
 // Start up the routes
 exports.init = function(app) {
@@ -23,13 +23,11 @@ function loadRoutes(app) {
 
 // Load and initialize an individual route file
 function loadRoute(app, file) {
-  var name = file.replace('.js', '')
-  , route = require('./' + name);
-	
-  // Don't include this file
-  if(name == 'routes')	return;
-  
-  // loop and init each route
+  var name = file.replace('.js', ''); // Grab the name
+  if(name == 'index')	return; // Don't include this file
+
+  // Load the route and call the init function if there is one
+  var route = require('./' + name);  
   Object.keys(route).map(function(action){
     switch(action) {
       case 'init':
@@ -41,7 +39,6 @@ function loadRoute(app, file) {
 
 // Dynamic Helpers
 function initHelpers(app) {
-	
   new natural.NounInflector().attach();
   app.dynamicHelpers ({
     googleAnalyticsId: function () {
@@ -51,8 +48,8 @@ function initHelpers(app) {
 }
 
 
+// Init the base routes of the application
 function initRootRoutes(app) {
-	// Set the base page
   app.get('/', function (req, res) {
     res.render('home');
   });
@@ -60,6 +57,5 @@ function initRootRoutes(app) {
   app.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
-});
-
+  });
 }
